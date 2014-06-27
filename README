@@ -1,0 +1,50 @@
+################################################################################
+################################################################################
+BIG MRes 2013 Project Code and Results
+D.J. Bennett
+05/09/2013
+Testing for non-random phylogenetic responses to urbanisation using mass
+ phylogeny estimation (MPE)
+################################################################################
+################################################################################
+
+## Title
+Analysis
+
+## Required programs
+R (v3+)
+
+## Program packages
+R: ape, reshape, picante, caper, lme4, stringr, RCurl, apTreeshape, phangorn,
+ stringdist, ggplot2, maps, mapdata, vioplot
+
+## OS and system
+Originally coded and run on:
+ Ubuntu 13.04 (Intel® Core™ i5-2540M CPU @ 2.60GHz × 4, 7.8 GiB)
+
+## Folders
+0_data --
+	files:
+		urban_data.csv (PREDICTS data) and name_modifiers.RData
+		published phylogenies and mass produced
+	folders:
+	 	pub_phylos (containing published phylogenies in Newick format 
+	 	and a treecomp.csv specifying the comparisons to be performed),
+	 	mass_phylos (containing the distribution of trees for each study
+	 	in Newick format.)
+1_results -- .csv and .RData files of the results
+2_figures -- produced figures for thesis
+functions -- EcoDataTools.R (functions for running ecological analysis) +
+	AP's plot fixed effects function.
+
+## Description
+These scripts are not for running automatively. Run 0_names.R first to generate
+names for the taxa present across studies. Move these resultant files to the
+0_names folder in the MPE pipeline. 0_names also produces a prem_taxadata.csv.
+This contains information for each study to help speed up generation of a 
+taxadata.csv.
+Once the MPE pipeline has run, move the name_modifiers.RData to the 0_data
+folder here. And move all resultant trees (from 5_screen in MPE pipeline) to the
+mass_phylos folder in 0_data.
+To regenerate the results I produced for my thesis, re-run each script in the
+order in which tehy are numbered.
